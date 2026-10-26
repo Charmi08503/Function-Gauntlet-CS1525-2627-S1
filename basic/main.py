@@ -57,9 +57,7 @@ def repeat_text(text: str, times: int) -> str:
     Returns the repeated text.
     """
     result = ""
-    for count in range(times):
-        result = result + text
-    return result
+    return text * times
 
 def contains_word(sentence: str, word: str) -> bool:
     """Checks whether a sentence contains a certain word.
@@ -128,4 +126,3 @@ if __name__ == "__main__":
     this folder that you can run a test on your code.
     """
     pass
-
