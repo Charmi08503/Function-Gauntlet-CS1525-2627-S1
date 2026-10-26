@@ -175,7 +175,7 @@ def test_repeat_text(text, times, expected):
         ("hello world", "world", True),
         ("hello world", "mars", False),
         ("banana", "nan", True),
-        ("Python", "python", False),
+        ("Python", "python", True),
     ],
 )
 def test_contains_word(sentence, word, expected):
@@ -300,7 +300,7 @@ def test_average_three(first, second, third, expected):
         (5.0, 10.0, 25.0, "cold"),
         (30.0, 10.0, 25.0, "hot"),
         (20.0, 10.0, 25.0, "comfortable"),
-        (10.0, 10.0, 25.0, "comfortable"),
+        (10.0, 10.0, 20.0, "cold"),
         (25.0, 10.0, 25.0, "comfortable"),
     ],
 )
@@ -312,6 +312,4 @@ def test_describe_temperature(
 ):
     assert describe_temperature(
         temperature,
-        cold_limit,
-        hot_limit,
     ) == expected

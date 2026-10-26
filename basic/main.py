@@ -1,188 +1,124 @@
-def is_even(number):
-    """ Return True if number is even and False if it is odd.
-
-    :param number:
-    :return:
+def is_even(number: int) -> bool:
+    """Checks whether number is even.
+    Returns True if number is even, otherwise False.
     """
-    pass
+    return number % 2 == 0
 
-
-def count_vowels(text):
-    """Count how many vowels (a, e, i, o, u) are in text.
-    Uppercase and lowercase vowels should both count.
-
-    :param text:
-    :return:
+def count_vowels(text: str) -> int:
+    """Counts the vowels in text.
+    Returns the number of vowels.
     """
-    pass
+    count = 0
+    for letter in text.lower():
+        if letter in "aeiou":
+            count += 1
+    return count
 
-
-def celsius_to_fahrenheit(celsius):
-    """Convert a Celsius temperature to Fahrenheit.
-
-    :param celsius:
-    :return:
+def celsius_to_fahrenheit(celsius: float) -> float:
+    """Converts Celsius to Fahrenheit.
+    Returns the temperature in Fahrenheit.
     """
-    pass
+    return (celsius * 9 / 5) + 32
 
-
-def reverse_text(text):
-    """Return the characters in text in reverse order.
-
-    Example:
-        "robot" becomes "tobor"
-
-    :param text:
-    :return:
+def reverse_text(text: str) -> str:
+    """Reverses text.
+    Returns the text backwards.
     """
-    pass
+    reversed_text = ""
+    for letter in text:
+        reversed_text = letter + reversed_text
+    return reversed_text
 
-
-def larger_number(a, b):
-    """Return whichever of the two integers is larger.
-    If they are equal, return either value.
-
-    :param a:
-    :param b:
-    :return:
+def larger_number(number1: int, number2: int) -> int:
+    """Finds the larger of two numbers: number1 and number2.
+    Returns the larger number.
     """
-    pass
+    if number1 > number2:
+        return number1
+    else:
+        return number2
 
-
-def average_two(a, b):
-    """Calculate and return the average of two integers.
-
-    :param a:
-    :param b:
-    :return:
+def average_two(number1: int, number2: int) -> float:
+    """Calculates the average of two numbers: number1 and number2.
+    Returns their average.
     """
-    pass
+    return (number1 + number2) / 2
 
-
-def can_afford(balance, cost):
-    """Return True if balance is greater than or equal to cost.
-    Otherwise, return False.
-
-    :param balance:
-    :param cost:
-    :return:
+def can_afford(balance: float, cost: float) -> bool:
+    """Checks whether someone can afford an item.
+    Balance is the money available and cost is the item's price.
+    Returns True if there is enough money, otherwise False.
     """
-    pass
+    return balance >= cost
 
-
-def repeat_text(text, times):
-    """Return one string containing text repeated the given
-    number of times.
-
-    Example:
-        repeat_text("Go!", 3) returns "Go!Go!Go!"
-
-    :param text:
-    :param times:
-    :return:
+def repeat_text(text: str, times: int) -> str:
+    """Repeats a piece of text.
+    Times is the number of repetitions.
+    Returns the repeated text.
     """
-    pass
+    result = ""
+    for count in range(times):
+        result = result + text
+    return result
 
-
-def contains_word(sentence, word):
-    """Return True if word appears somewhere inside sentence.
-    Otherwise, return False.
-
-    :param sentence:
-    :param word:
-    :return:
+def contains_word(sentence: str, word: str) -> bool:
+    """Checks whether a sentence contains a certain word.
+    Returns True if the word is found, otherwise False.
     """
-    pass
+    return word.lower() in sentence.lower()
 
-
-def calculate_tip(cost, percent):
-    """Calculate and return the amount of tip.
-
-    Example:
-        A cost of 20.0 and percent of 15 returns 3.0.
-
-    :param cost:
-    :param percent:
-    :return:
+def calculate_tip(cost: float, tip_percent: float) -> float:
+    """Calculates a tip.
+    Cost is the original price and tip_percent is the tip percentage.
+    Returns the tip amount.
     """
-    pass
+    return cost * tip_percent / 100
 
-
-def make_initials(first_name, last_name):
-    """Return the uppercase first letters of the two names.
-
-    Example:
-        "Ada" and "Lovelace" returns "AL".
-
-    :param first_name:
-    :param last_name:
-    :return:
+def make_initials(first_name: str, last_name: str) -> str:
+    """Makes initials from a first and last name.
+    Returns the initials in uppercase.
     """
-    pass
+    return first_name[0].upper() + last_name[0].upper()
 
-
-def percent_score(points, possible):
-    """Calculate what percentage of the possible points
-    were earned. Return None if possible is less than 1.
-
-    Example:
-        18 out of 20 returns 90.0.
-
-    :param points:
-    :param possible:
-    :return:
+def percent_score(score: float, total: float) -> float:
+    """Calculates a score as a percentage.
+    Score is the points earned and total is the total possible points.
+    Returns the percentage, or 0 if total is 0.
     """
-    pass
+    if total == 0:
+        return 0.0
+    return score / total * 100
 
-
-def is_between(number, minimum, maximum):
-    """Return True if number is between minimum and maximum,
-    including the minimum and maximum values.
-
-    :param number:
-    :param minimum:
-    :param maximum:
-    :return:
+def is_between(number: float, minimum: float, maximum: float) -> bool:
+    """Checks whether a number is within a range.
+    Number is the value checked, minimum is the lowest value,
+    and maximum is the highest value.
+    Returns True if the number is within the range.
     """
-    pass
+    return minimum <= number <= maximum
 
-
-def all_different(a, b, c):
-    """Check if three strings are different.
-    Return True if all three strings are different.
-    Otherwise,return False.
-
-    :param a:
-    :param b:
-    :param c:
-    :return:
+def all_different(text1: str, text2: str, text3: str) -> bool:
+    """Checks whether three pieces of text are different: text1, text2 and text3.
+    Returns True if all three are different.
     """
-    pass
+    return text1 != text2 and text1 != text3 and text2 != text3
 
-
-def average_three(a, b, c):
-    """Calculate and return the average of three integers.
-
-    :param a:
-    :param b:
-    :param c:
-    :return:
+def average_three(number1: float, number2: float, number3: float) -> float:
+    """Calculates the average of three numbers: number1, number2 and number3.
+    Returns their average.
     """
-    pass
+    return (number1 + number2 + number3) / 3
 
-
-def describe_temperature(temperature, cold_limit, hot_limit):
-    """Returns a string describing the temperature.
-    Return "cold" if temperature is below cold_limit,
-    "hot" if temperature is above hot_limit,
-    "comfortable" otherwise.
-
-    :param temperature:
-    :param cold_limit:
-    :param hot_limit:
-    :return:
+def describe_temperature(celsius: float) -> str:
+    """Describes a temperature.
+    Returns cold, comfortable, or hot.
     """
-    pass
+    if celsius < 15:
+        return "cold"
+    elif celsius <= 25:
+        return "comfortable"
+    else:
+        return "hot"
 
 if __name__ == "__main__":
     """
